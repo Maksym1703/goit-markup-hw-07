@@ -1,19 +1,7 @@
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
-.header .logo {
-  display: flex;
-  align-items: center;
-}
-
-.navigation-list-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header .address {
-  margin-left: auto;
+.navigation-list-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .navigation-list {
@@ -26,6 +14,10 @@
 .address {
   padding-top: 32px;
   padding-bottom: 33px;
+
+  .header & {
+    margin-left: auto;
+  }
 }
 
 .navigation-list-link {
@@ -38,11 +30,16 @@
   padding-bottom: 32px;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.navigation-list-link:hover,
-.navigation-list-link:focus {
-  color: var(--accent-color-blue);
+  &:hover,
+  &:focus {
+    color: var(--accent-color-blue);
+  }
+
+  & .is-current:hover,
+  & .is-current:focus {
+    color: var(--accent-color-blue);
+  }
 }
 
 .address-mail,
@@ -56,15 +53,6 @@
   letter-spacing: 0.02em;
   color: var(--secondary-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-list-item:hover .address-mail-icon,
-.address-list-item:focus .address-mail-icon,
-.address-list-item:active .address-mail-icon,
-.address-list-item:hover .address-contact-icon,
-.address-list-item:focus .address-contact-icon,
-.address-list-item:active .address-contact-icon {
-  fill: var(--accent-color-blue);
 }
 
 .address-mail:hover,
@@ -90,6 +78,17 @@
   align-items: center;
 }
 
-.address-list-item:not(:last-child) {
-  margin-right: 50px;
+.address-list-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &:hover .address-mail-icon,
+  &:focus .address-mail-icon,
+  &:active .address-mail-icon,
+  &:hover .address-contact-icon,
+  &:focus .address-contact-icon,
+  &:active .address-contact-icon {
+    fill: var(--accent-color-blue);
+  }
 }

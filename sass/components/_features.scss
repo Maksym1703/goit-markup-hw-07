@@ -16,18 +16,20 @@
   color: var(--accent-color);
 }
 
-.special .special-list {
-  display: flex;
-  margin: auto;
-}
-
 .special {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  & .special-list {
+    display: flex;
+    margin: auto;
+  }
 }
 
-.special-list-position:not(:last-child) {
-  margin-right: 30px;
+.special-list-position {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .features {

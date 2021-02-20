@@ -12,16 +12,18 @@
   letter-spacing: 0.03em;
 }
 
-.work .work-list {
-  display: flex;
-}
-
-.work-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .work {
   padding-bottom: 94px;
+
+  & .work-list {
+    display: flex;
+  }
+}
+
+.work-list-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .work-list-text {

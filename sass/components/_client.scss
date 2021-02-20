@@ -1,6 +1,6 @@
 .client {
   display: flex;
-  background-color: #ffffff;
+  background-color: var(--hero-color);
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -21,10 +21,14 @@
   justify-content: space-between;
 }
 
-.client-list-item:not(:last-child) {
-  margin-right: 30px;
+.client-list-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.social-list-item:not(:last-child) {
-  margin-right: 10px;
+.social-list-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
